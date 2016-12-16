@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-12-16
+  purpose: MyString
+  amount: 1
+  incomeOutcome: false
+  assetLiability: false
+
+two:
+  date: 2016-12-16
+  purpose: MyString
+  amount: 1
+  incomeOutcome: false
+  assetLiability: false
