@@ -7,6 +7,11 @@
       investments = @state.investments.slice()
       investments.push investment
       @setState investments: investments
+    deleteInvestment: (investment) ->
+      investments = @state.investments.slice()
+      index = investments.indexOf investment
+      investments.splice index, 1
+      @replaceState investments: investments
     render: ->
       React.DOM.div
         className: 'investments'
@@ -22,6 +27,7 @@
               React.DOM.th null, 'Amount'
               React.DOM.th null, 'Income-Outcome'
               React.DOM.th null, 'Asset-Liability'
+              React.DOM.th null, 'Actions'
             React.DOM.tbody null,
               for investment in @state.investments
-                React.createElement Investment, key: investment.id, investment: investment
+                React.createElement Investment, key: investment.id, investment: investment, handleDeleteInvestment: @deleteInvestment

@@ -15,7 +15,7 @@
     $.post '', { investment: @state }, (data) =>
       @props.handleNewInvestment data
       @setState @getInitialState()
-    , 'JSON' 
+    , 'JSON'
   render: ->
     React.DOM.form
       className: 'form-inline'

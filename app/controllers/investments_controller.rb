@@ -14,6 +14,12 @@ class InvestmentsController < ApplicationController
     end
   end
 
+  def destroy
+    @investment = Investment.find(params[:id])
+    @investment.destroy
+    head :no_content
+  end
+
   private
   def investment_params
     params.require(:investment).permit(:date, :purpose, :amount, :incomeOutcome, :assetLiability)
