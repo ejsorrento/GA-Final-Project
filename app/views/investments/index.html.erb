@@ -1,3 +1,10 @@
 <h1>oh hello</h1>
 
-<%= react_component 'Investments', { data: @investments } %>
+<table>
+<tr>
+  <% @investments.each do |investment| %>
+<td><%= react_component 'Investments', { data: @investments } %></td>
+<td><%= link_to 'Monthly Graph', investment_path(@investments) %></td>
+</tr>
+  <% end %>
+</table>

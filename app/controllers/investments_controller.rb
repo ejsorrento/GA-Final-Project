@@ -4,6 +4,10 @@ class InvestmentsController < ApplicationController
     @investments = Investment.all
   end
 
+  def show
+    @investment = Investment.all
+  end
+
   def create
     @investment = Investment.new(investment_params)
 
