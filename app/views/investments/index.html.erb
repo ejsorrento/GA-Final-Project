@@ -1,10 +1,17 @@
-<h1>oh hello</h1>
+<h1>Expense Tracker</h1>
+
+
+
+
+<%# line_chart Investment.group_by_day_of_week(:created_at, format: "%a").count, min: 1, max: @max_investment %>
+<%= line_chart @investment_data, min: 1, max: @max_investment %>
+
 
 <table>
 <tr>
-  <% @investments.each do |investment| %>
+
 <td><%= react_component 'Investments', { data: @investments } %></td>
-<td><%= link_to 'Monthly Graph', investment_path(@investments) %></td>
+<!-- <td><%= link_to 'Monthly Graph', investment_path(@investments) %></td> -->
 </tr>
-  <% end %>
+
 </table>

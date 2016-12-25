@@ -16,5 +16,7 @@
 //= require react
 //= require react_ujs
 //= require components
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .
 //= require bootstrap-sprockets

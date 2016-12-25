@@ -1,6 +1,7 @@
 class InvestmentsController < ApplicationController
 
   def index
+    @investment_data = Investment.group_by_day_of_week(:created_at, format: "%a").sum(:amount)
     @investments = Investment.all
   end
 
